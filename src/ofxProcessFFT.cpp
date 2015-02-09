@@ -56,7 +56,7 @@ void ProcessFFT::calculateFFT(vector<float>&buffer, float _FFTpercentage, int _n
     this->numFFTbins = _numFFTbins;
     this->FFTpercentage = _FFTpercentage;
 
-    float avgCol[numFFTbins];
+    float *avgCol = new float[numFFTbins];
     
     fftSpectrum.clear(); //empty it all
     
@@ -167,6 +167,7 @@ void ProcessFFT::calculateFFT(vector<float>&buffer, float _FFTpercentage, int _n
         graphHigh.push_back(highEqAvg);
     }
     
+	delete[] avgCol;
 }
 
 //---------------------------------------------

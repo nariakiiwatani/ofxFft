@@ -2,7 +2,7 @@
 
 #include "ofMain.h"
 
-#define ALLOW_FFTW
+//#define ALLOW_FFTW
 
 enum fftWindowType {
 	OF_FFT_WINDOW_RECTANGULAR,
